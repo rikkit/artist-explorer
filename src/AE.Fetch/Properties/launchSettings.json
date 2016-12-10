@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AE.Fetch": {
+      "commandName": "Project",
+      "commandLineArgs": "tehrikkit a6ab4b9376e54cdb06912bfbd9c1f288 3aa7202fd1bc6d5a7ac733246cbccc4b ./../../public/artists.json"
+    }
+  }
+}

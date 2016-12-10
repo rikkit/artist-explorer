@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, system, sans-serif;
+}
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  header {
+    width: 100%;
+  }
+
+  .now-playing {
+    width: 100%;
+
+    .media-wrap {
+      flex-grow: 3;
+      
+    }
+    
+    .media-info {
+      flex-grow: 1;
+    }
+  }
+}
+
+
+  h1 {
+    margin: 0.5em 0;
+    font-size: 2em;
+  }
+
+a {
+  color: #3f894a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+a:hover {
+  color: #27552e;
+  border-bottom: 1px solid #27552e;
+}

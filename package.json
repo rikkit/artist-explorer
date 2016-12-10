@@ -1,0 +1,31 @@
+{
+  "name": "artist-explorer",
+  "description": "react practice",
+  "author": "Rikki Tooley",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rikkit/artist-explorer"
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "build": "brunch build --production"
+  },
+  "devDependencies": {
+    "jquery": "^2.1.4",
+    "sass-brunch": "^2.6.3",
+    "brunch": "^2.0.0",
+    "javascript-brunch": "^2.0.0",
+    "css-brunch": "^2.0.0",
+    "uglify-js-brunch": "^2.0.0",
+    "clean-css-brunch": "^2.0.0",
+    "auto-reload-brunch": "^2.0.0",
+    "brunch-typescript": "^2.0.0"
+  },
+  "dependencies": {
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-redux": "^4.4.1",
+    "redux": "^3.6.0"
+  }
+}
