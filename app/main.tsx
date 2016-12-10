@@ -15,3 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#app')
   );
 });
+
+// Resize the app component to the size of the window.
+$(document).ready(() => {
+    let resizeTimer;
+
+    const resizeTimeoutMs = 100;
+    let appRoot = $("#app").first();  
+    function onViewportResize() {
+        // width is handled with CSS, top margin provided by header
+        appRoot.height(document.documentElement.clientHeight);
+    }
+
+    onViewportResize();
+
+    // throttle resize events
+    // http://stackoverflow.com/a/5490021
+    window.onresize = function(){
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(onViewportResize, resizeTimeoutMs);
+    };
+});
