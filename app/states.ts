@@ -4,6 +4,7 @@ export interface Artist {
   country :string;
   playcount :number;
   imageUrl :string;
+  bioHtml :string;
 }
 
 export interface AppState {
@@ -33,7 +34,8 @@ export function buildDefaultState() : AppState {
           mbid: '',
           country: '',
           playcount: null,
-          imageUrl: 'https://i.imgur.com/XHce5GF.jpg'
+          imageUrl: 'https://i.imgur.com/XHce5GF.jpg',
+          bioHtml: ''
         }
       ]
     }

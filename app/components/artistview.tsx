@@ -24,6 +24,9 @@ const BaseCounter: React.StatelessComponent<CounterProps> = (props: ArtistProps)
       </header>
       
       <div className={"media-info"}>
+        <div className={"artist-bio"}>
+          {artist.bioHtml}
+        </div>
         <Counter />
       </div>
     </div>

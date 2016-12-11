@@ -26,6 +26,9 @@ namespace AE.Fetch
 
         [JsonProperty("imageUrl")]
         public string ImageUrl { get; set; }
+
+        [JsonProperty("bioHtml")]
+        public string Bio { get; set; }
     }
 
     public class Program
@@ -81,6 +84,8 @@ namespace AE.Fetch
                         Playcount = lastArtist.PlayCount,
                         Mbid = lastArtist.Mbid,
                         ImageUrl = lastArtist.MainImage.Largest.ToString(),
+                        Bio = lastArtist.Bio.Summary,
+
                         Country = mbzArtist.Country
                     };
                 });
