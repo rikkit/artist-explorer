@@ -23,6 +23,9 @@ namespace AE.Fetch
 
         [JsonProperty("playCount")]
         public int? Playcount { get; set; }
+
+        [JsonProperty("imageUrl")]
+        public string ImageUrl { get; set; }
     }
 
     public class Program
@@ -65,25 +68,26 @@ namespace AE.Fetch
                 .OrderByDescending(artist => artist.PlayCount);
             
             var mbzArtists = new List<Artist>();
-            foreach (var artist in artists)
+            foreach (var lastArtist in artists)
             {
                 var a = await Task.Run(() =>
                 {
                     // TODO this might fail
-                    var mbzArtist = MusicBrainz.Search.Artist(arid: artist.Mbid).Data.FirstOrDefault();
+                    var mbzArtist = MusicBrainz.Search.Artist(arid: lastArtist.Mbid).Data.FirstOrDefault();
 
                     return new Artist
                     {
-                        Name = artist.Name,
-                        Playcount = artist.PlayCount,
-                        Mbid = artist.Mbid,
+                        Name = lastArtist.Name,
+                        Playcount = lastArtist.PlayCount,
+                        Mbid = lastArtist.Mbid,
+                        ImageUrl = lastArtist.MainImage.Largest.ToString(),
                         Country = mbzArtist.Country
                     };
                 });
 
                 mbzArtists.Add(a);
 
-                await Task.Delay(1000);
+                await Task.Delay(1010);
                 Console.Write(".");
             }
 

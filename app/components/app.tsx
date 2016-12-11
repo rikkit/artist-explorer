@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Counter from './counter';
+import ArtistView from './artistview';
+import NextUp from './nextup';
 
 export default class App extends React.Component<{}, {}> {
   render() {
@@ -9,13 +10,9 @@ export default class App extends React.Component<{}, {}> {
           <h1>Artist Explorer</h1>
         </header>
         <div className="now-playing">
-          <div className="media-wrap">
-
-          </div>
-          <div className="media-info">
-            <Counter />            
-          </div>
+          <ArtistView/>
         </div>
+        <NextUp />
       </div>
     );
   }
