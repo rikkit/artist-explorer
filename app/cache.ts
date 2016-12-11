@@ -1,10 +1,13 @@
 import * as States from './states'
 
+
 interface CacheEntry {
     model :Object | Object[];
 }
 
-export default class Cache {
+export default class Cache {    
+    public static readonly ARTISTS_KEY = "artists";
+
     static cache :{ [key: string]: CacheEntry; } = {};
 
     public static saveModel(key :string, model :Object | Object[]) {
@@ -30,5 +33,9 @@ export default class Cache {
         return index
             ? entry.model[index]
             : entry.model;
+    }
+
+    public static clear() {
+        this.cache = {};
     }
 }

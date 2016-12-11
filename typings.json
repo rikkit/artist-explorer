@@ -4,6 +4,7 @@
     "react-redux": "registry:npm/react-redux#4.4.0+20160614222153"
   },
   "globalDependencies": {
+    "jest": "registry:dt/jest#16.0.0+20161025131017",
     "jquery": "registry:dt/jquery#1.10.0+20160929162922"
   }
 }

@@ -10,7 +10,7 @@ interface ArtistProps {
     onMinusClick: () => any
 }
 
-const BaseCounter: React.StatelessComponent<CounterProps> = (props: ArtistProps) => {
+const ArtistView: React.StatelessComponent<CounterProps> = (props: ArtistProps) => {
   let index = props.artistState.index;
   let artist = props.artistState.artists[index];
   let bgStyle = {
